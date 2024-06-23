@@ -1,4 +1,5 @@
-print(666)
+print(666,end=',')
+
 print(666)
 print("hahah")
 
@@ -62,7 +63,7 @@ print("数字11.345宽度不限制，小数精度2，结果是：%.2f" % num2)
 name = "zhangsan"
 year = 2019
 price = 10.5
-print(f"名字是{name}，今年{year}岁，买了{price}元")
+print(f"名字是{name}，今年{year}岁，买了{price}元",end=',')
 
 #对表达式进行格式化 
 # .表达式：一条具有运算结果的语句，如 1+2
