@@ -8,6 +8,11 @@ if age >= 18:
 if age >=114:
     print("已经过世了")
 
+if not age >= 18:  # not表示非,反过来
+    print("未成年人")
+
+
+
 # if...elif语句应用
 age = int(input("请输入你的年龄："))
 

@@ -30,10 +30,10 @@ Python 中常用的有 6 种值类型：
 .有序的不可变的序列：可有序记录一堆不可变的 python 数据
 
 .5.字典（dictionary）
-.无序 Key-Value 的集合：可无序记录一堆 Key-Value 型的 Pthon 数据
+.无序 Key-Value 的集合：可无序记录一堆 Key-Value 型的 Python 数据
 
 .6.集合（set）
-.无序不重复集合：可记录一堆不重复的 Pthon 数据集合
+.无序不重复集合：可记录一堆不重复的 Python 数据集合
 
 # 注释的分类
 
@@ -55,6 +55,8 @@ print("aa",end=" ") # end 参数表示输出后不换行
 
 print("hello\tworld")
 print("hello\trld") # \t 输出一个制表符
+
+\n 换行
 
 # 输入函数 input()
 
@@ -169,3 +171,35 @@ for 循环的变量作用域
 .for 循环的变量，只在 for 循环中有效，出了 for 循环就无效了，实际上是可以访问到的，在编程规范书是不允许的
 
 .for 循环的嵌套
+
+.循环中断：break 和 continue
+continue: 跳出本次循环，继续下一次循环 :可用于 for 循环和 while 循环
+break: 跳出整个循环
+
+# 函数
+
+def 函数名(0 个或多个参数):
+-- . 函数体
+-- . return 返回值
+
+特殊字面量:None
+.表示：空，无意义
+.用在 if 判断，None 等同于 False
+
+1.函数的说明文档
+def func(x,y):
+"""
+函数说明
+:param x: 参数
+:param y: 参数
+:return: 返回值
+"""
+函数体
+return x+y
+
+2.函数的嵌套调用
+.一个函数里调用另一个函数
+
+3.函数作用域
+.局部变量：函数内部定义的变量
+.全局变量：函数外部定义的变量
