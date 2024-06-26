@@ -70,4 +70,5 @@ print(f"名字是{name}，今年{year}岁，买了{price}元",end=',')
 print("1*1 的结果是: %d" % (1*1)) # 1\*1 的结果是: 1
 print("字符串在 python 中的类型是: %s" % type("字符串"))
 
+print(name.title()) # 字符串首字母大写
 
