@@ -60,6 +60,11 @@ print("hello\trld") # \t 输出一个制表符
 
 # 输入函数 input()
 
+input()函数让程序暂停运行，等待用户输入数据
+.接收一个参数，表示输入提示信息
+
+python 将用户输入的数据，以字符串的形式存储在变量中
+
 # 数据类型转换
 
 .常见的转换语句
@@ -106,6 +111,22 @@ MAX_SPEED = 100
 .算术运算符：+、-、\*、/、//（取整除）、%（取余数）、\*\*（幂）
 .比较运算符：>、<、==（等于）、>=、<=、!=（不等于）
 .复合赋值运算：=、+=、-=、\*=、/=、//=、%=
+
+1.检查多个条件
+.and：两个条件同时成立，结果才为真
+.or：两个条件有一个成立，结果就为真
+.not：取反，结果为真则为假，结果为假则为真
+age1 = 20
+age2 = 18
+age1 >= 20 and age2 >= 20 # 两个条件同时成立，结果才为真
+age1 >= 20 or age2 >= 20 # 两个条件有一个成立，结果就为真
+
+2.检查特定值是否在列表中
+.in：检查特定值是否在列表中，结果为真则为真，结果为假则为假
+.not in：检查特定值是否在列表中，结果为真则为假，结果为假则为真
+num = [1, 2, 3]
+1 in num # 结果为真
+4 not in num # 结果为真
 
 # 字符串扩展
 
@@ -193,6 +214,12 @@ print(name.title()) # Tom
 
 # 循环语句：while、for
 
+for 循环用于针对集合中的每个元素执行代码块，而 while 循环则根据条件判断是否执行代码块
+
+1.使用 while 循环处理列表和字典
+.for 循环是一种遍历列表有效方式，但不应该在 for 循环中修改列表，否则会导致 python 难以跟踪其中的元素
+.如果需要修改列表中的元素，则应该使用 while 循环
+
 .while 条件:
 -- . 条件成立时，执行代码块
 .自行控制循环条件
@@ -247,6 +274,61 @@ return x+y
 
 .global 关键字
 .在函数内部，使用 global 关键字声明全局变量
+
+——————————————————————————————————————————————————
+.1.实参和形参
+greet_user(username) # username 是形参
+greet_user('Tom') # 'Tom' 是实参
+
+.2.传递实参
+.位置实参：按照函数定义顺序，一一对应传递实参
+.关键字实参：在调用函数时，按照 key=value 的形式传递实参
+
+.位置实参
+def pet(name, age):
+print(f'我的宠物是 {name}，今年 {age} 岁了')
+pet('小白', 1) # 我的宠物是 小白，今年 1 岁了
+
+.关键字实参
+def pet(name, age):
+print(f'我的宠物是 {name}，今年 {age} 岁了')
+pet(age=1, name='小白') # 我的宠物是 小白，今年 1 岁了
+
+.3.默认值
+def pet(name, age=2):
+print(f'我的宠物是 {name}，今年 {age} 岁了')
+pet('小白') # 我的宠物是 小白，今年 2 岁了
+
+4.返回值
+def sum(x, y):
+return x + y
+
+5.传递任意数量实参
+.\*numbers 形参中的星号让 python 创建一个名为 numers 的空元组，并将传入的参数都打包到这个元组中
+
+def sum(\*numbers):
+
+6.结合使用位置实参和任意数量实参
+def make_pizza(size,\*toppings):
+print(f'我制作了一个 {size} 寸的披萨{toppings}')
+make_pizza(16,'apple','banana') # 我制作了一个 16 寸的披萨('apple', 'banana')
+
+7.使用任意数量的关键字实参
+def build_profile(first, last, \*\*user_info):
+user_info['first'] = first
+user_info['last'] = last
+return user_info
+profile = build_profile('Tom', 'Smith', age=25, city='New York') # {'age': 25, 'city': 'New York'}S
+
+形参\*\*user_info 形参中的双星号让 python 创建一个名为 user_info 的空字典，并将传入的参数都打包到这个字典中
+
+8.将函数存储在模块中
+pizza.py
+.导入整个模块: import pizza
+.导入模块中的函数: from pizza import make_pizza
+.使用 as 关键字为函数指定别名: from pizza import make_pizza as mp
+.使用 as 关键字为模块指定别名: import pizza as p
+.导入模块中的所有函数: from pizza import \*
 
 # 数据容器
 
@@ -307,3 +389,63 @@ print(friend_foods) # ['苹果', '香蕉', '橘子']
 my_foods = ('苹果', '香蕉', '橘子')
 包含⼀个元素的元组，必须在这个元素后⾯加上逗号
 my_t = (3,)
+
+7.字典
+字典(dictionnary)是一系列键值对
+.用{} 定义字典
+aline = {'name': '阿莉', 'age': 18, 'gender': '女'}
+print(aline['name']) # 阿莉
+
+7.1 添加或修改字典元素
+aline['age'] = 19
+print(aline) # {'name': '阿莉', 'age': 19, 'gender': '女'}
+
+7.2 删除字典元素
+del 语句
+del aline['age']
+print(aline) # {'name': '阿莉', 'gender': '女'}
+
+7.3 使用 get()方法获取字典元素
+参数：get(key, default=None) 获取指定键的值，如果键不存在，则返回 default 的值
+
+7.4 遍历字典
+items() 方法: 返回字典中所有键值对列表
+user = {'name': '阿莉', 'age': 18, 'gender': '女'}
+for key, value in user.items():
+print(key, value) # 依次打印字典的键值对
+
+7.5 遍历字典的键
+.keys() 方法: 返回字典中所有键列表
+如果不使用 keys() 方法，for 循环遍历字典时，只能获取键，不能获取值
+keys 可省略
+user = {'name': '阿莉', 'age': 18, 'gender': '女'}
+for key in user.keys():
+print(key) # 依次打印字典的键，name age gender
+
+7.6 按特定的顺序遍历字典的所有键
+遍历字典时将按照键的插入顺序来遍历，如果想按照特定的顺序来遍历字典的键，可以使用 sorted() 方法
+方案一.在 for 循环中对返回的键进行排序，可使用 sorted() 方法排序键列表
+
+user = {'name': '阿莉', 'age': 18, 'gender': '女'}
+for key in sorted(user.keys()):
+print(key) # 依次打印字典的键，age gender name
+
+7.6 遍历字典的值
+values() 方法: 返回字典中所有值列表
+user = {'name': '阿莉', 'age': 18, 'gender': '女'}
+for value in user.values():
+print(value) # 依次打印字典的值，阿莉 18 女
+
+7.8 嵌套
+.字典列表
+alion01 = {'name': '阿莉', 'age': 18, 'gender': '女'}
+alion02 = {'name': '阿莉', 'age': 18, 'gender': '女'}
+users = [alion01, alion02]
+for user in users:
+print(user) # 依次打印字典列表中的字典，{'name': '阿莉', 'age': 18, 'gender': '女'} {'name': '阿莉',
+
+.在字典中存储列表
+user = {'name': '阿莉', 'age': 18, 'gender': '女'， 'hobbies': ['篮球', '足球']}
+
+.在字典中存储字典
+user = {'name': '阿莉', 'age': 18, 'gender': '女'， 'address': {'province': '广东', 'city': '深圳'}}

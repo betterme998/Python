@@ -39,3 +39,14 @@ for i in list(range(3, 31, 3)):
 list_10 = [value**3 for value in range(1, 11)]
 for i in list_10:
     print(i) # 1,8,27,64,125,216,343,512,729,1000
+
+
+"""
+删除为特定值的所有列表元素
+"""
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+while 'cat' in pets:
+ pets.remove('cat')
+print(pets)
+
