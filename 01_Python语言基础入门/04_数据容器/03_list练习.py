@@ -50,3 +50,26 @@ while 'cat' in pets:
  pets.remove('cat')
 print(pets)
 
+"""
+一个列表内容：[21,25,21,23,22,20]
+1.定义这个列表，使用变量接受它
+2.追加一个数字31，到列表尾部
+3.追加一个新列表[29,33,30]到尾部
+4.取出第一个元素（21）
+5.取出最后一个元素（30）
+6.查找元素31，在列表下标位置
+"""
+age = [21,25,21,23,22,20]
+age.append(31)
+print(age)
+age.extend([29,33,30])
+print(age)
+end_age = age.pop()
+print(end_age)
+print(age)
+one_age = age.pop(0)
+print(one_age)
+print(age)  
+index = age.index(31)
+print(index)
+

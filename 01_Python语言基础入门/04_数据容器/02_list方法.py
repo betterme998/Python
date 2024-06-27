@@ -30,5 +30,27 @@ mylist.extend([6, 7])
 print(mylist) # [4, 10, 2, 3, 5, 6, 7]
 
 # 删除元素---------------------------------------------------------------
-mylist.pop()
+element =  mylist.pop()# 删除列表末尾元素,并返回删除的元素
 print(mylist) # [4, 10, 2, 3, 5 , 6]
+print(element) # 6
+
+# 删除指定下标元素
+del mylist[0]
+print(mylist) # [10, 2, 3, 5 , 6]
+
+# 删除某元素在列表中第一个匹配项
+mylist.remove(10)
+print(mylist) # [2, 3, 5 , 6]
+
+# 清空列表
+mylist.clear()
+print(mylist) # []
+
+# 统计某个元素出现的次数--------------------------------------
+mylist = [1, 2, 3, 4, 5, 6, 1]
+count = mylist.count(1)
+print(count) # 2
+
+# 统计列表全部元素数量
+count = len(mylist)
+print(count) # 7
