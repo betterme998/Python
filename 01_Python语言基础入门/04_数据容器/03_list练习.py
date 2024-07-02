@@ -73,3 +73,26 @@ print(age)
 index = age.index(31)
 print(index)
 
+
+"""
+取出列表中的偶数[1,2,3,4,5,6,7,8,9,10]
+.取出偶数并存入新列表对象中
+.使用while循环和for循环各操作一次
+"""
+list_num = [1,2,3,4,5,6,7,8,9,10]
+list_num2 = []
+list_num3 = []
+index = 0
+while index < len(list_num):
+   if list_num[index] % 2 == 0:
+       list_num2.append(list_num[index])
+   index += 1
+print(list_num2)
+
+for item in list_num:
+   if item % 2 == 0:
+       list_num3.append(item)
+print(list_num3)
+
+
+
