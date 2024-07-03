@@ -11,3 +11,4 @@ print(new_str[::-1])
 #方法二
 str_list = str.split(',')
 print(str_list[1][:5][::-1])
+print(str_list[1].replace('来','')[::-1])
