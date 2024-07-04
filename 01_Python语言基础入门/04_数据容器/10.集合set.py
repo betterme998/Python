@@ -55,3 +55,8 @@ print(len(set1))
 
 
 # 集合的遍历
+# 集合不支持下标索引，不能用while循环
+# 可以用for循环
+set1 = {1, 2, 3}
+for element in set1:
+    print(element)

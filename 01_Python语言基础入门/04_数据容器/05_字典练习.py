@@ -8,3 +8,21 @@ print(value['frist_name'])
 print(value['last_name'])
 print(value['age'])
 print(value['city'])
+
+"""
+--------------------------
+"""
+
+my_dict = {
+  "王力宏": { "部门":"科技部", "工资":3000, "级别":1 },
+  "张三": { "部门":"财务部", "工资":2000, "级别":1 },
+  "李四": { "部门":"人事部", "工资":1000, "级别":2 },
+  "王五": { "部门":"人事部", "工资":1000, "级别":2 },
+  "赵六": { "部门":"人事部", "工资":1000, "级别":2 }
+}
+print(my_dict)
+for item in my_dict:
+  if my_dict[item]["级别"] == 1:
+    my_dict[item]["级别"] += 1
+    my_dict[item]["工资"] += 1000
+print(my_dict)
