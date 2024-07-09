@@ -294,7 +294,7 @@ def pet(name, age):
 print(f'我的宠物是 {name}，今年 {age} 岁了')
 pet(age=1, name='小白') # 我的宠物是 小白，今年 1 岁了
 
-.3.默认值
+.3.默认值（写最后面）
 def pet(name, age=2):
 print(f'我的宠物是 {name}，今年 {age} 岁了')
 pet('小白') # 我的宠物是 小白，今年 2 岁了
