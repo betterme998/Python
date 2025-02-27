@@ -8,7 +8,7 @@ print(my_list[1:4])# [2,3,4]
 
 # 对tuple切片操作，从头开始，到最后，步长1
 my_tuple = (1, 2, 3, 4, 5, 6)
-print(my_tuple[:])# (2,3,4,5)
+print(my_tuple[:])# (1, 2, 3, 4, 5, 6)
 
 # 对str进行切片操作，从头开始，到最后，步长2
 my_str = "hello world"
@@ -24,4 +24,4 @@ print(my_list[3:1:-1])# [4, 3]
 
 # 对元组进行切片，从头开始，到尾结束，步长-2
 my_tuple = (1, 2, 3, 4, 5, 6)
-print(my_tuple[::-2])
+print(my_tuple[::-2]) # (6, 4, 2)

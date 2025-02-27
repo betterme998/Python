@@ -1,3 +1,6 @@
+# import torch
+# print(torch.__version__)
+
 print(666,end=',')
 
 print(666)
