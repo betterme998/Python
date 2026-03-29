@@ -1,5 +1,5 @@
 
-# range语法1 range(num)
+# range语法1 range(num) range() 函数用于生成一个整数序列
 # for x in range(10):
     # print(x)
 
