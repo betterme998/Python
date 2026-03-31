@@ -671,3 +671,32 @@ from 模块名 import 功能名 as 别名
 2.掌握使用pip安装第三方包
 
 我们只需要使用Python内置的pip程序即可。
+
+# 七.可视化图表
+
+1.json数据格式
+
+Python数据和Json数据的相互转化
+
+import json 导入json模块
+准备符合格式json格式要求的python数据  
+data = [{"name":"老王","age": 16}, {"name": "张三","age": 20}]
+
+通过 json.dumps(data)方法把python数据转化为了 json数据  
+data=json.dumps(data)
+
+通过 json.loads(data)方法把json数据转化为了 python数据  
+data=json.loads(data)
+
+2.pyecharts模块介绍
+
+如果想要做出数据可视化效果图，可以借助pyecharts模块来完成  
+概况:  
+Echarts 是个由百度开源的数据可视化，凭借着良好的交互性，精巧的图表设计，得到了众多开发者的认可.而 Python 是门富有表达力的语言，很适合用于数据处理.当数据分析遇上数据可视化时pyecharts 诞生了.
+
+pyecharts模块安装  
+pip install pyecharts
+
+3.pyecharts快速入门  
+4.数据处理  
+5.创建折线图
