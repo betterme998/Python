@@ -689,6 +689,7 @@ data=json.dumps(data)
 data=json.loads(data)
 
 2.pyecharts模块介绍
+https://pyecharts.org/#/
 
 如果想要做出数据可视化效果图，可以借助pyecharts模块来完成  
 概况:  
@@ -698,5 +699,8 @@ pyecharts模块安装
 pip install pyecharts
 
 3.pyecharts快速入门  
-4.数据处理  
+set_global_opts方法 这里全局配置选项
+
+4.数据处理
+
 5.创建折线图

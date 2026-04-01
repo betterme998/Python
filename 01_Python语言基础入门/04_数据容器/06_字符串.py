@@ -12,6 +12,7 @@ print(value,value2)
 # index方法
 value =  my_str.index('o')
 print(value)
+print(type(value))
 
 # replace方法 替换字符串中指定的字符,返回一个新的字符串
 new_my_str = my_str.replace('o','a')
