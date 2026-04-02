@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
                 <script type="text/javascript" src="https://assets.pyecharts.org/assets/v6/echarts.min.js"></script>
-            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v6/maps/china.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v6/maps/henan.js"></script>
 
     
 </head>
 <body >
-    <div id="831570535b164d0b9a64a14f16bcdd85" class="chart-container" style="width:900px; height:500px; "></div>
+    <div id="cf0ad95553f7473fab7d07bc11a90cb8" class="chart-container" style="width:900px; height:500px; "></div>
     <script>
-        var chart_831570535b164d0b9a64a14f16bcdd85 = echarts.init(
-            document.getElementById('831570535b164d0b9a64a14f16bcdd85'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_831570535b164d0b9a64a14f16bcdd85 = {
+        var chart_cf0ad95553f7473fab7d07bc11a90cb8 = echarts.init(
+            document.getElementById('cf0ad95553f7473fab7d07bc11a90cb8'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_cf0ad95553f7473fab7d07bc11a90cb8 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -28,34 +28,94 @@
     "series": [
         {
             "type": "map",
-            "name": "\u6d4b\u8bd5\u5730\u56fe",
+            "name": "\u6cb3\u5357\u7701\u75ab\u60c5\u5730\u56fe",
             "label": {
                 "show": true,
                 "margin": 8,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
-            "map": "china",
+            "map": "\u6cb3\u5357",
             "data": [
                 {
-                    "name": "\u5317\u4eac\u5e02",
-                    "value": 99
+                    "name": "\u90d1\u5dde\u5e02",
+                    "value": 295
                 },
                 {
-                    "name": "\u4e0a\u6d77\u5e02",
-                    "value": 199
+                    "name": "\u5883\u5916\u8f93\u5165\u5e02",
+                    "value": 79
                 },
                 {
-                    "name": "\u6e56\u5357\u7701",
-                    "value": 299
+                    "name": "\u5546\u4e18\u5e02",
+                    "value": 106
                 },
                 {
-                    "name": "\u53f0\u6e7e\u7701",
-                    "value": 399
+                    "name": "\u5f00\u5c01\u5e02",
+                    "value": 33
                 },
                 {
-                    "name": "\u5e7f\u4e1c\u7701",
-                    "value": 499
+                    "name": "\u9a7b\u9a6c\u5e97\u5e02",
+                    "value": 143
+                },
+                {
+                    "name": "\u5b89\u9633\u5e02",
+                    "value": 54
+                },
+                {
+                    "name": "\u8bb8\u660c\u5e02",
+                    "value": 40
+                },
+                {
+                    "name": "\u4e09\u95e8\u5ce1\u5e02",
+                    "value": 7
+                },
+                {
+                    "name": "\u6f2f\u6cb3\u5e02",
+                    "value": 36
+                },
+                {
+                    "name": "\u5468\u53e3\u5e02",
+                    "value": 76
+                },
+                {
+                    "name": "\u5357\u9633\u5e02",
+                    "value": 156
+                },
+                {
+                    "name": "\u4fe1\u9633\u5e02",
+                    "value": 274
+                },
+                {
+                    "name": "\u6d4e\u6e90\u793a\u8303\u533a\u5e02",
+                    "value": 5
+                },
+                {
+                    "name": "\u65b0\u4e61\u5e02",
+                    "value": 57
+                },
+                {
+                    "name": "\u7126\u4f5c\u5e02",
+                    "value": 32
+                },
+                {
+                    "name": "\u5e73\u9876\u5c71\u5e02",
+                    "value": 58
+                },
+                {
+                    "name": "\u6d1b\u9633\u5e02",
+                    "value": 31
+                },
+                {
+                    "name": "\u6fee\u9633\u5e02",
+                    "value": 17
+                },
+                {
+                    "name": "\u9e64\u58c1\u5e02",
+                    "value": 19
+                },
+                {
+                    "name": "\u5730\u533a\u5f85\u786e\u8ba4\u5e02",
+                    "value": 0
                 }
             ],
             "roam": true,
@@ -77,7 +137,7 @@
     "legend": [
         {
             "data": [
-                "\u6d4b\u8bd5\u5730\u56fe"
+                "\u6cb3\u5357\u7701\u75ab\u60c5\u5730\u56fe"
             ],
             "selected": {},
             "show": true,
@@ -129,6 +189,7 @@
     "title": [
         {
             "show": true,
+            "text": "\u7701\u7ea7\u75ab\u60c5\u5730\u56fe",
             "target": "blank",
             "subtarget": "blank",
             "padding": 5,
@@ -169,26 +230,37 @@
             },
             {
                 "min": 100,
-                "max": 199,
-                "label": "100-199",
+                "max": 999,
+                "label": "100-999",
                 "color": "#FFCCFF"
             },
             {
-                "min": 200,
-                "max": 299,
-                "label": "200-299",
+                "min": 1000,
+                "max": 4999,
+                "label": "1000-4999",
                 "color": "#FF9999"
             },
             {
-                "min": 300,
-                "max": 399,
-                "label": "300-399",
+                "min": 5000,
+                "max": 9999,
+                "label": "5000-9999",
+                "color": "#FF6666"
+            },
+            {
+                "min": 10000,
+                "max": 99999,
+                "label": "10000-99999",
+                "color": "#FF9999"
+            },
+            {
+                "min": 100000,
+                "label": "100000+",
                 "color": "#FF6666"
             }
         ]
     }
 };
-        chart_831570535b164d0b9a64a14f16bcdd85.setOption(option_831570535b164d0b9a64a14f16bcdd85);
+        chart_cf0ad95553f7473fab7d07bc11a90cb8.setOption(option_cf0ad95553f7473fab7d07bc11a90cb8);
     </script>
 </body>
 </html>
